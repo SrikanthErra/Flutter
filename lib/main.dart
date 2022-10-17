@@ -9,9 +9,9 @@ void main() {
                 width: 200,
                 height: 200,
                 decoration: BoxDecoration(
-                  border: Border.all(width: 2, color: Colors.red),
+                  border: Border.all(width: 2, color: Colors.blueGrey),
                   color: Colors.grey,
-                  borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

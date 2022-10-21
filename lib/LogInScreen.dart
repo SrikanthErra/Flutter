@@ -13,7 +13,7 @@ class _LogInScreenState extends State<LogInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('LogIn Page')),
+        title: Center(child: Text('LogIn Page in another repository')),
         backgroundColor: Colors.blue,
       ),
       body: Column(children: [
@@ -36,6 +36,9 @@ class _LogInScreenState extends State<LogInScreen> {
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           child: TextField(
             decoration: InputDecoration(
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  borderSide: BorderSide(color: Colors.black)),
               labelText: 'Enter password',
               hintStyle: TextStyle(
                 color: Colors.yellow,
@@ -61,7 +64,7 @@ class _LogInScreenState extends State<LogInScreen> {
             onPressed: () {
               ValidateInputs();
             },
-            child: Text('LogIN')),
+            child: Text('LogIn')),
       ]),
     );
   }

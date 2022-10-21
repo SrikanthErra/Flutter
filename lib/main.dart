@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'LogIn.dart';
 import 'LogInScreen.dart';
+import 'SignUp.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,8 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'LogIn Page',
-      home: LogInScreen(),
+      //home: LogInScreen(),
       //home: LogIn(),
+      home: SignUp(),
     );
   }
 }

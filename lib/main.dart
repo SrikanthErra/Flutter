@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:textfield/App_routes.dart';
 import 'package:textfield/listview.dart';
 
+import 'App_pages.dart';
 import 'LogIn.dart';
 import 'LogInScreen.dart';
 import 'SignUp.dart';
@@ -21,7 +23,9 @@ class MyApp extends StatelessWidget {
       // home: LogIn(),
       // home: SignUp(),
       // home: list_sample(),
-      home: listview(),
+      //home: listview(),
+      initialRoute: AppRoutes.initial,
+       routes: AppPages.routes,
     );
   }
 }

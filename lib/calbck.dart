@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -49,6 +47,7 @@ class calbck extends StatelessWidget {
                 onPressed: () {
                   if (_formkey.currentState!.validate()) {
                     getvalues(_name.text, _id.text);
+                   // print(_name.text);
                     Navigator.pop(context);
                   }
                 },

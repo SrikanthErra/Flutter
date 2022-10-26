@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:textfield/App_pages.dart';
+import 'package:textfield/App_routes.dart';
 
 import 'calbck.dart';
 
@@ -9,7 +11,8 @@ class listview extends StatefulWidget {
 }
 
 class _listviewState extends State<listview> {
-  final emp_list = [];
+  final List<String> emp_list = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,15 +33,25 @@ class _listviewState extends State<listview> {
       ),
       floatingActionButton: FloatingActionButton(
           onPressed: (() {
-            Navigator.of(context).push(MaterialPageRoute(
+            /* Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => calbck(getvalues: ((nameVal, idVal) {
                       final String result = '$nameVal   $idVal';
                       setState(() {
                         emp_list.add(result);
                       });
-                    }))));
+                    }))));*/
+            Navigator.pushNamed(context, AppRoutes.calbck);
+            
+            
+                final String name = AppConstants.empName;
+                final String id=AppConstants.empId;
+                final String result= '$name   $id';
+                setState(() {
+                  emp_list.add(result);
+                });
           }),
-          child: Icon(Icons.add)),
-    );
+          
+          child: Icon(Icons.add),
+    ));
   }
 }

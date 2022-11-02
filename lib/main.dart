@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:textfield/App_routes.dart';
+import 'package:textfield/Routes/App_routes.dart';
 import 'package:textfield/listview.dart';
 
-import 'App_pages.dart';
+import 'Routes/App_pages.dart';
 import 'LogIn.dart';
 import 'LogInScreen.dart';
 import 'SignUp.dart';

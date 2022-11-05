@@ -1,4 +1,4 @@
-import 'dart:html';
+
 import 'dart:ui';
 
 import 'package:dio/dio.dart';
@@ -14,6 +14,7 @@ class api_call extends StatefulWidget {
   State<api_call> createState() => _api_callState();
 }
 
+// ignore: camel_case_types
 class _api_callState extends State<api_call> {
   TextEditingController _name = new TextEditingController();
   TextEditingController _Id = new TextEditingController();
@@ -55,7 +56,7 @@ class _api_callState extends State<api_call> {
             child: Container(
               child: TextButton(
                   onPressed: () {
-                    requestLogin(context);
+                 requestLogin(context);
                   },
                   child: Text(
                     'Submit',
@@ -69,6 +70,43 @@ class _api_callState extends State<api_call> {
     );
   }
 
+//   requestLogin(BuildContext context) async {
+// //step1: create request url with base url and endpoint
+// //https://19cghmc.cgg.gov.in/myghmcwebapi/Grievance/getGrievanceStatusCitizen
+//     final requestUrl = "https://19cghmc.cgg.gov.in/myghmcwebapi/Grievance/" +
+//         "getGrievanceStatusCitizen";
+//     // "http://uat7.cgg.gov.in/gccfms/webservice/VersionsInfo/"+"getVersionsInfo";
+//     print(requestUrl);
+// //step2:create payload if request POST,PUT, and other except GET
+//     final requestPayload = {
+//       "userid": "cgg@ghmc",
+//       "password": "ghmc@cgg@2018",
+//       "MobileNo": "9985074116",
+//       "CompId": "111022556764"
+//     };
+//     print(requestPayload);
+// // step3: create headers,parameters and authourization,if in case present
+//     final headers= {
+//   "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+//   "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
+//   "Access-Control-Allow-Headers": "Origin,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,locale",
+//   "Access-Control-Allow-Methods": "POST, OPTIONS"
+// };
+// // step4:dio or http, use one of it to connect server
+//     final _dioObject = Dio();
+//     {
+//       try {
+//         final _response =
+//             await _dioObject.post(requestUrl, data: requestPayload);
+//         print(_response);
+//       } on DioError catch (e) {
+//         print(e.response?.statusCode);
+//         print('Exception = ' + e.toString());
+//       throw Exception(e);
+//       }
+//     }
+//   }
+// }
   requestLogin(BuildContext context) async {
 //step1: create request url with base url and endpoint
 //https://19cghmc.cgg.gov.in/myghmcwebapi/Grievance/getGrievanceStatusCitizen
@@ -85,12 +123,12 @@ class _api_callState extends State<api_call> {
     };
     print(requestPayload);
 // step3: create headers,parameters and authourization,if in case present
-    final headers= {
+    /* final headers= {
   "Access-Control-Allow-Origin": "*", // Required for CORS support to work
   "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
   "Access-Control-Allow-Headers": "Origin,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,locale",
   "Access-Control-Allow-Methods": "POST, OPTIONS"
-};
+};*/
 // step4:dio or http, use one of it to connect server
     final _dioObject = Dio();
     {
@@ -99,9 +137,7 @@ class _api_callState extends State<api_call> {
             await _dioObject.post(requestUrl, data: requestPayload);
         print(_response);
       } on DioError catch (e) {
-        print(e.response?.statusCode);
-        print('Exception = ' + e.toString());
-      throw Exception(e);
+        print(e.response);
       }
     }
   }
@@ -146,4 +182,5 @@ class _api_callState extends State<api_call> {
 // step 5: print the response
   }
 */
+
 

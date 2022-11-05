@@ -20,12 +20,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'LogIn Page',
       //home: LogInScreen(),
-      // home: LogIn(),
-      // home: SignUp(),
+      // // home: SignUp(),
       // home: list_sample(),
       //home: listview(),
       initialRoute: AppRoutes.initial,
-       routes: AppPages.routes,
+      routes: AppPages.routes,
     );
   }
 }

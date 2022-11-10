@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:textfield/API_integration/api_call.dart';
 import 'package:textfield/API_integration/grievance.dart';
@@ -12,6 +10,7 @@ import 'package:textfield/listview.dart';
 import 'package:textfield/profile.dart';
 import 'package:textfield/sample_list.dart';
 
+import '../Wrestlers/wrestlers_info.dart';
 import 'App_routes.dart';
 
 class AppPages {
@@ -26,6 +25,7 @@ class AppPages {
       AppRoutes.list_sample: ((context) => list_sample()),
       AppRoutes.listview: ((context) => listview()),
       AppRoutes.profile: ((context) => profile()),
+      AppRoutes.wrestlers_info: ((context) => wrestlers_info()),
       AppRoutes.calbck: ((context) => calbck(
             getvalues: (String nameVal, String idVal) {
               AppConstants.empName = nameVal;

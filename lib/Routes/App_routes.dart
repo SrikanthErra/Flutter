@@ -11,7 +11,7 @@ import 'package:textfield/sample_list.dart';
 import 'package:textfield/profile.dart';
 class AppRoutes {
   AppRoutes._();
-  static const initial = grievence;
+  static const initial = wrestlers_info;
   static const LogInScreen = "/loginscreen";
   static const LogIn = "/login";
   static const SignUp = "/signup";
@@ -22,4 +22,5 @@ class AppRoutes {
   static const shared_pref = "/shared_pref";
    static const api_call = "/api_call";
    static const grievence = "/grievence";
+   static const wrestlers_info = "/wrestlers_info";
 }

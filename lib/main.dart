@@ -6,6 +6,7 @@ import 'Routes/App_pages.dart';
 import 'LogIn.dart';
 import 'LogInScreen.dart';
 import 'SignUp.dart';
+import 'Wrestlers/database_helper.dart';
 import 'listview.dart';
 import 'sample_list.dart';
 
@@ -16,12 +17,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final db = DatabaseHelper.instance.database;
     return MaterialApp(
       title: 'LogIn Page',
       //home: LogInScreen(),
       // // home: SignUp(),
       // home: list_sample(),
       //home: listview(),
+
       initialRoute: AppRoutes.initial,
       routes: AppPages.routes,
     );

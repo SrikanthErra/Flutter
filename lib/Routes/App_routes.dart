@@ -12,7 +12,7 @@ import 'package:textfield/sample_list.dart';
 import 'package:textfield/profile.dart';
 class AppRoutes {
   AppRoutes._();
-  static const initial = list_provider;
+  static const initial = wrestlers_info;
   static const LogInScreen = "/loginscreen";
   static const LogIn = "/login";
   static const passdata = "/passdata";

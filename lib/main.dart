@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:textfield/Routes/App_routes.dart';
 import 'package:textfield/listview.dart';
+import 'package:textfield/provider/counter_logic.dart';
+import 'package:textfield/provider/list_logicClass.dart';
 import 'Routes/App_pages.dart';
 import 'LogIn.dart';
 import 'LogInScreen.dart';
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final db = DatabaseHelper.instance.database;
-    return MaterialApp(
+    /*return MaterialApp(
       title: 'LogIn Page',
       //home: LogInScreen(),
       // // home: SignUp(),
@@ -27,6 +30,23 @@ class MyApp extends StatelessWidget {
 
       initialRoute: AppRoutes.initial,
       routes: AppPages.routes,
+    );*/
+
+     return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => CounterStateNotifier()),
+        ChangeNotifierProvider(create: (_) => textStateNotifier()),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        initialRoute: AppRoutes.initial,
+        routes: AppPages.routes,
+        theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+        ),
+        //  home: GetStart(),
+      ),
+      //  home: GetStart(),
     );
   }
 }

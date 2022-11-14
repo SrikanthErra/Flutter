@@ -4,9 +4,14 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class AppInputTextfield extends StatelessWidget {
   const AppInputTextfield(
-      {super.key, required this.hintText, required this.nameController});
-  final String hintText;
+      {super.key,
+      required this.hintText,
+      required this.nameController,
+      required this.errorMessage,
+      required this.input_type});
+  final String hintText, errorMessage;
   final TextEditingController nameController;
+  final TextInputType input_type;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,6 +23,12 @@ class AppInputTextfield extends StatelessWidget {
             prefixIcon: Icon(Icons.people),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(4.0)))),
+        validator: (value) {
+          if (value!.isEmpty) {
+            return errorMessage;
+          }
+        },
+        keyboardType: input_type,
       )),
     );
   }

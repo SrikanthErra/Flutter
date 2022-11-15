@@ -9,6 +9,11 @@ class DatabaseHelper {
   static final _databaseVersion = 1;
 
   static final table = 'Wrestlers';
+  static final name = 'name';
+  static final age = 'age';
+  static final image = 'image';
+  static final columnId = 'userId';
+  static final id = 'id';
   // static final tableContact = 'contact';
 
   // make this a singleton class
@@ -43,6 +48,7 @@ class DatabaseHelper {
     await db.execute('''
           CREATE TABLE Wrestlers
 (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
 name varchar(255),
 image varchar(255),
 age varchar(255),
@@ -98,18 +104,18 @@ userId varchar(255)
 
   // // We are assuming here that the id column in the map is set. The other
   // // column values will be used to update the row.
-  // Future<int> update(Map<String, dynamic> row) async {
-  //   Database db = await instance.database;
-  //   int id = row[columnId];
-  //   return await db.update(table, row, where: '$columnId = ?', whereArgs: [id]);
-  // }
+  Future<int> update(Map<String, dynamic> row) async {
+    Database db = await instance.database;
+    int id = row[name];
+    return await db.update(table, row, where: '$name = ?', whereArgs: [id]);
+  }
 
   // // Deletes the row specified by the id. The number of affected rows is
   // // returned. This should be 1 as long as the row exists.
-  // Future<int> delete(int id) async {
-  //   Database db = await instance.database;
-  //   return await db.delete(table, where: '$columnId = ?', whereArgs: [id]);
-  // }
+  Future<int> delete(String userId) async {
+    Database db = await instance.database;
+    return await db.delete(table, where: '$columnId = ?', whereArgs: [userId]);
+  }
 
   // Future<int> deleteContact(int id) async {
   //   Database db = await instance.database;

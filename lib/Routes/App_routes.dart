@@ -15,6 +15,7 @@ class AppRoutes {
   static const initial = wrestlers_info;
   static const LogInScreen = "/loginscreen";
   static const LogIn = "/login";
+  static const update = "/update";
   static const passdata = "/passdata";
   static const SignUp = "/signup";
   static const list_sample = "/sample_list";

@@ -5,6 +5,7 @@ import 'package:textfield/LogIn.dart';
 import 'package:textfield/LogInScreen.dart';
 import 'package:textfield/Shared_pref/shared_main.dart';
 import 'package:textfield/SignUp.dart';
+import 'package:textfield/Wrestlers/update.dart';
 import 'package:textfield/Wrestlers/wrestler_list.dart';
 import 'package:textfield/calbck.dart';
 import 'package:textfield/callBack/container_clback.dart';
@@ -34,7 +35,8 @@ class AppPages {
       AppRoutes.list_provider: ((context) => list_provider()),
       AppRoutes.listview: ((context) => listview()),
       AppRoutes.profile: ((context) => profile()),
-      AppRoutes.passdata: ((context) => pass(result: '',)),
+      AppRoutes.passdata: ((context) => pass()),
+      AppRoutes.update: ((context) => update()),
       AppRoutes.wrestlers_info: ((context) => wrestlers_info()),
       AppRoutes.wrestler_list:((context) => wrestler_list()),
       AppRoutes.containerCalbck:((context) => containerCallback()),

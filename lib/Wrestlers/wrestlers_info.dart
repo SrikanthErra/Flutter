@@ -61,17 +61,18 @@ class _wrestlers_infoState extends State<wrestlers_info> {
                       print(_name.text);
                       print(WrestlerImagePath.value);
                       print(_age.text);
+
                       _name.text = '';
                       _age.text = '';
                     }
                   }),
                   child: Text('Submit')),
-              TextButton(
+                 TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, AppRoutes.wrestler_list);
                   },
-                  child: Text('Retrieve Data'))
-            ],
+                  child: Text('Retrieve Data')),
+            ]
           ),
         ),
       ),
